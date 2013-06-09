@@ -7,6 +7,8 @@ partition.replacement <- function(Dx,PM,Q=NULL,Pparm=NULL,
   if ((!is.matrix(Dx))&(!is.data.frame(Dx))) stop("Dx must be a matrix or data-frame") 
   
   LPM <- unique(as.vector(PM)) # numero di partizioni
+  if (min(LPM[which(LPM>0)])!=1) stop("Partition numbers must start from one, check partition matrix.")
+  
   if (is.null(Q)) Q <- max(Dx)
   if ((is.null(Pparm))&(is.null(fake.model))) {
     warning("zero replacements")

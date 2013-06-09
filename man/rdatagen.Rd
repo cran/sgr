@@ -19,8 +19,7 @@ Number of observations.
 Correlation matrix.
 }
   \item{Q}{
-Number of discrete possible values. Could be a single value or a vector.
-If \code{Q} is set to 1 (default value), produces continuous variables by setting \code{th=c(-Inf,Inf)} and \code{probs=1}. 
+Number of discrete values in the random variable. Could be a single value or a vector. If \code{Q} is set to 1 (default value), the function produces continuous variables by setting \code{th=c(-Inf,Inf)} and \code{probs=1}. 
 }
 
 \item{th}{
@@ -48,9 +47,9 @@ dichotomous and ordered rating scores. \emph{Quality & Quantity}.
 Massimiliano Pastore & Luigi Lombardi
 }
 \note{
-Requires \code{MASS} package. 
+Requires  
 
-Defaults work like simple \code{mwrnorm} producing continuous normally distributed variables. 
+Defaults work like in the \code{mwrnorm} function of the \code{MASS} package.
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -63,20 +62,20 @@ require(MASS)
 ## only default
 rdatagen()
 
-## set correlation only
+## set correlations only
 R <- matrix(c(1,.4,.4,1),2,2)
 Dx <- rdatagen(n=10000,R=R)$data
 
 par(mfrow=c(1,2))
 for (j in 1:ncol(Dx)) hist(Dx[,j])
 
-## set correlation and Q
+## set correlations and Q
 Dx <- rdatagen(n=10000,R=R,Q=2)$data
 
 par(mfrow=c(1,2))
 for (j in 1:ncol(Dx)) barplot(table(Dx[,j])/nrow(Dx))
 
-## set correlation and thresholds
+## set correlations and thresholds
 th <- list(c(-Inf,qchisq(pbinom(0:3,4,.5),1),Inf),
     c(-Inf,qnorm(pbinom(0:2,3,.5)),Inf))
 Dx <- rdatagen(n=10000,R=R,th=th)$data
@@ -84,7 +83,7 @@ Dx <- rdatagen(n=10000,R=R,th=th)$data
 par(mfrow=c(1,2))
 for (j in 1:ncol(Dx)) barplot(table(Dx[,j])/nrow(Dx))
 
-## set correlation and probabilities
+## set correlations and probabilities
 probs <- list(c(.125,.375,.375,.125),c(.125,.375,.375,.125))
 Dx <- rdatagen(n=10000,R=R,probs=probs)$data
 

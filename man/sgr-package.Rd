@@ -6,15 +6,16 @@
 Sample Generation by Replacement
 }
 \description{
-The library for Sample Generation by Replacement simulations
+The library for Sample Generation by Replacement simulations. The package can be used to perform fake data analysis according to the sample generation by replacement approach. It includes functions for making simple inferences about
+discrete/ordinal fake data. The package allows to study the implications of fake data for empirical results.
 }
 \details{
 \tabular{ll}{
 Package: \tab sgr\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
+Version: \tab 1.0.1\cr
 Suggests: \tab MASS, polycor\cr
-Date: \tab 2013-03-16\cr
+Date: \tab 2013-06-09\cr
 License: \tab GPL (>=2)\cr
 Encoding: \tab UTF-8\cr
 }

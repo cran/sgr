@@ -14,7 +14,7 @@ rdatarepl(Dx, RM, printfp = TRUE)
 \arguments{
   \item{Dx}{Data frame or matrix to be replaced.}
   \item{RM}{Replacement matrix.}
-  \item{printfp}{Logical, if \code{TRUE} (the default) print the percentage of
+  \item{printfp}{Logical, if \code{TRUE} (the default), it prints the percentages of
   data replaced.}
 }
 \details{

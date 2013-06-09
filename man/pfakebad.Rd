@@ -22,7 +22,7 @@ An observed original value.
 Overall probability of replacement. 
 }
   \item{Q}{
-Number of discrete possible values. 
+Number of discrete values, \eqn{1, \ldots, Q}, in the r. v.
 }
   \item{gam}{
 Gamma parameter.
@@ -47,7 +47,7 @@ p(f=k|d=h,\theta_F)=
 \end{array}
 \right. 
 }
-with \eqn{\theta_F} is the parameter vector \eqn{\theta=(\gamma,\delta,\pi)} and \eqn{GD} is the generalized Beta distribution for discrete variables (\code{\link{dgBetaD}}) with bounds \eqn{a=h+1} and \eqn{b=Q}. The parameter \eqn{\pi} denotes the probability of faking bad.   
+with \eqn{\theta_F}  and \eqn{GD} being the parameter vector \eqn{(\gamma,\delta,\pi)} and the generalized Beta distribution for discrete variables (\code{\link{dgBetaD}}) with bounds \eqn{a=h+1} and \eqn{b=Q}. The parameter \eqn{\pi} denotes the probability of faking bad.   
 }
 \references{
 Pastore, M., Lombardi, L. (in press). The impact of faking on Cronbach’s Alpha for

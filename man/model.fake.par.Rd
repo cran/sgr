@@ -12,8 +12,8 @@ model.fake.par(fake.model = c("uninformative", "average", "slight", "extreme"))
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{fake.model}{A character string indicating which instance of a conditional replacement distribution is to be used for the faking model. The options are:  \code{uninformative} (default option), sets \code{gam = c(1,1)} and \code{del = c(1,1)}; \code{average} sets \code{gam = c(3,3)} and \code{del = c(3,3)}; 
-  \code{slight} sets \code{gam = c(1.5,4)} and \code{del = c(4,1.5)}; \code{extreme} sets \code{gam = c(4,1.5)} and \code{del = c(1.5,4)}.}
+  \item{fake.model}{A character string indicating which instance of a conditional replacement distribution is to be used for the faking model. The options are:  \code{uninformative} (default option) [\code{gam = c(1,1)} and \code{del = c(1,1)}]; \code{average} [\code{gam = c(3,3)} and \code{del = c(3,3)}]; 
+  \code{slight} [\code{gam = c(1.5,4)} and \code{del = c(4,1.5)}]; \code{extreme} [\code{gam = c(4,1.5)} and \code{del = c(1.5,4)}].}
 }
 \value{
 Gives a list with \eqn{\gamma} and \eqn{\delta} parameters.

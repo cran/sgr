@@ -3,7 +3,7 @@ source(file.path(R.home("share"), "R", "examples-header.R"))
 options(warn = 1)
 library('sgr')
 
-assign(".oldSearch", search(), pos = 'CheckExEnv')
+base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
 cleanEx()
 nameEx("dgBeta")
 ### * dgBeta
@@ -85,7 +85,7 @@ nameEx("partition.replacement")
 flush(stderr()); flush(stdout())
 
 ### Name: partition.replacement
-### Title: Partition of fake.
+### Title: Internal function.
 ### Aliases: partition.replacement
 ### Keywords: utility
 
@@ -269,20 +269,20 @@ require(MASS)
 ## only default
 rdatagen()
 
-## set correlation only
+## set correlations only
 R <- matrix(c(1,.4,.4,1),2,2)
 Dx <- rdatagen(n=10000,R=R)$data
 
 par(mfrow=c(1,2))
 for (j in 1:ncol(Dx)) hist(Dx[,j])
 
-## set correlation and Q
+## set correlations and Q
 Dx <- rdatagen(n=10000,R=R,Q=2)$data
 
 par(mfrow=c(1,2))
 for (j in 1:ncol(Dx)) barplot(table(Dx[,j])/nrow(Dx))
 
-## set correlation and thresholds
+## set correlations and thresholds
 th <- list(c(-Inf,qchisq(pbinom(0:3,4,.5),1),Inf),
     c(-Inf,qnorm(pbinom(0:2,3,.5)),Inf))
 Dx <- rdatagen(n=10000,R=R,th=th)$data
@@ -290,7 +290,7 @@ Dx <- rdatagen(n=10000,R=R,th=th)$data
 par(mfrow=c(1,2))
 for (j in 1:ncol(Dx)) barplot(table(Dx[,j])/nrow(Dx))
 
-## set correlation and probabilities
+## set correlations and probabilities
 probs <- list(c(.125,.375,.375,.125),c(.125,.375,.375,.125))
 Dx <- rdatagen(n=10000,R=R,probs=probs)$data
 
@@ -345,7 +345,7 @@ flush(stderr()); flush(stdout())
 
 ### ** Examples
 
-## non replacements
+## no replacements
 replacement.matrix(Q=7) 
 
 ## faking good
@@ -368,7 +368,8 @@ replacement.matrix(Q=7,p=c(.4,.4),fake.model="slight")
 
 ### * <FOOTER>
 ###
-cat("Time elapsed: ", proc.time() - get("ptime", pos = 'CheckExEnv'),"\n")
+options(digits = 7L)
+base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
 grDevices::dev.off()
 ###
 ### Local variables: ***
