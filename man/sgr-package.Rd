@@ -13,9 +13,9 @@ discrete/ordinal fake data. The package allows to study the implications of fake
 \tabular{ll}{
 Package: \tab sgr\cr
 Type: \tab Package\cr
-Version: \tab 1.0.1\cr
+Version: \tab 1.0.2\cr
 Suggests: \tab MASS, polycor\cr
-Date: \tab 2013-06-09\cr
+Date: \tab 2013-08-11\cr
 License: \tab GPL (>=2)\cr
 Encoding: \tab UTF-8\cr
 }

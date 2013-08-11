@@ -1,15 +1,18 @@
 #rm(list=ls())
-#source('~/lavori/Rdevel/sgr1.0/R/model.fake.par.R')
+#load("~/lavori/Rdevel/data/Dx.rda")
+#load("~/lavori/Rdevel/data/PM.rda")
+#Q <- NULL; Pparm <- NULL; fake.model=NULL;p=NULL
+#Pparm <- list(p=c(0,0),gam=c(0,4),del=c(0,1.5))
 
 partition.replacement <- function(Dx,PM,Q=NULL,Pparm=NULL,
                                   fake.model=NULL,p=NULL) {
   
   if ((!is.matrix(Dx))&(!is.data.frame(Dx))) stop("Dx must be a matrix or data-frame") 
   
-  LPM <- unique(as.vector(PM)) # numero di partizioni
+  (LPM <- unique(as.vector(PM))) # numero di partizioni
   if (min(LPM[which(LPM>0)])!=1) stop("Partition numbers must start from one, check partition matrix.")
   
-  if (is.null(Q)) Q <- max(Dx)
+  if (is.null(Q)) Q <- max(Dx,na.rm=TRUE)
   if ((is.null(Pparm))&(is.null(fake.model))) {
     warning("zero replacements")
     rg <- length(LPM)-1
@@ -57,7 +60,7 @@ partition.replacement <- function(Dx,PM,Q=NULL,Pparm=NULL,
     }
     righe <- unique(righe)
     colonne <- unique(colonne)
-    (K <- matrix(Dx[righe,colonne],length(righe),length(colonne)))
+    (K <- as.matrix(Dx[righe,colonne],length(righe),length(colonne)))
     
     (R <- replacement.matrix(Q,p=Pparm$p[h,],
                              gam=Pparm$gam[h,],del=Pparm$del[h,]))
@@ -72,8 +75,8 @@ partition.replacement <- function(Dx,PM,Q=NULL,Pparm=NULL,
   
   Delta <- Dx-Fx
   Delta[Delta!=0] <- 1
-  Fperc <- sum(Delta)/(prod(dim(Delta)))*100
-  cat(paste(Fperc,"% of data replaced.",sep=""),"\n")
+  Fperc <- sum(Delta,na.rm=TRUE)/(prod(dim(Delta)))*100
+  cat(paste(round(Fperc,2),"% of data replaced.",sep=""),"\n")
   return(Fx)
 }
 
@@ -84,6 +87,6 @@ partition.replacement <- function(Dx,PM,Q=NULL,Pparm=NULL,
 #PM <- matrix(0,nrow(Dx),ncol(Dx))
 #PM[3:10,2] <- 1
 #PM[3:10,1] <- 1
-#partition.replacement(Dx,PM) # warning! zero replacements
+#partition.replacement(Dx,PM,Pparm=Pparm) # warning! zero replacements
 
 #partition.replacement(Dx,PM,fake.model="uninformative",p=matrix(c(.3,.2),ncol=2))

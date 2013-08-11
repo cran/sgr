@@ -1,9 +1,9 @@
-7b53554b0e5dc81369c2fedc93a9f930 *DESCRIPTION
+47bcff57e4129a9f9badf7557bdc22f7 *DESCRIPTION
 8b54e5a89fbda3af5e077053d40bec76 *NAMESPACE
 017b7ecd17e084b74523eca5e63e0221 *R/dgBeta.R
 4118788ca180d50560ec2a950b743dd7 *R/dgBetaD.R
 4317d38d0058bda12045afbcee5b450b *R/model.fake.par.R
-817b667666b36b229a3c9687b2ee95f7 *R/partition.replacement.R
+b648c1caef6fc9d72ba1d68bc56c0b4b *R/partition.replacement.R
 57a6e4c8a3933e8afb00f08b799347da *R/pfake.R
 ce362ff99d92849bc72faf18f04e0822 *R/pfakebad.R
 a8d0b7ef8e64cfdc1fe1aed1f2847330 *R/pfakegood.R
@@ -24,6 +24,6 @@ e1e1348c61c9172101e7689c7bfed600 *man/pfakegood.Rd
 43f2a3a022e0da38c9d188f0119823c4 *man/rdatagen.Rd
 1bed860ba465ca642c3b4701200c864c *man/rdatarepl.Rd
 ec537f4f03302282776ba2f34809f279 *man/replacement.matrix.Rd
-47f8120a24fd74d5820c0a8a7832aca0 *man/sgr-package.Rd
+c298bb41ec54ac65e45d7fc63b70be52 *man/sgr-package.Rd
 376dd186578512bead597611f7ab5689 *man/smokers.Rd
 04f9fd74a4169bb3f61736ae0b8f6ab3 *sgr-Ex.R
