@@ -50,7 +50,7 @@ p(f=k|d=h,\theta_F)=
 with \eqn{\theta_F} and \eqn{GD} being the parameter vector \eqn{(\gamma,\delta,\pi)}  and the generalized Beta distribution for discrete variables (\code{\link{dgBetaD}}) with bounds \eqn{a=h+1} and \eqn{b=Q}. The parameter \eqn{\pi} denotes the probability of faking good.   
 }
 \references{
-Pastore, M., Lombardi, L. (in press). The impact of faking on Cronbach’s Alpha for
+Pastore, M., Lombardi, L. (in press). The impact of faking on Cronbach's Alpha for
 dichotomous and ordered rating scores. \emph{Quality & Quantity}.
 }
 \author{

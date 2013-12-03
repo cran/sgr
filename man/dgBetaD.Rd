@@ -52,7 +52,7 @@ G^*(x;a,b,\gamma,\delta)=\frac{1}{B(\gamma,\delta)(b-a+2c)^{\gamma+\delta-1}}
 Gives the density.
 }
 \references{
-Pastore, M., Lombardi, L. (in press). The impact of faking on Cronbach’s Alpha for
+Pastore, M., Lombardi, L. (in press). The impact of faking on Cronbach's Alpha for
 dichotomous and ordered rating scores. \emph{Quality & Quantity}.
 }
 \author{

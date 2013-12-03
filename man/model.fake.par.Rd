@@ -28,7 +28,7 @@ Massimiliano Pastore
 %%  ~~further notes~~
 %}
 \references{
-Pastore, M., Lombardi, L. (in press). The impact of faking on Cronbach’s Alpha for
+Pastore, M., Lombardi, L. (in press). The impact of faking on Cronbach's Alpha for
 dichotomous and ordered rating scores. \emph{Quality & Quantity}.
 }
 %% ~Make other sections like Warning with \section{Warning }{....} ~
