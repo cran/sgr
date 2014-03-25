@@ -5,7 +5,7 @@
 Internal function.
 }
 \description{
-This function allows to set different replacement distributions for different subsets of cells of the data matrix.
+This function allows to set different replacement distributions for different subsets of cells in the data matrix.
 }
 \usage{
 partition.replacement(Dx, PM, Q = NULL, Pparm = NULL,
@@ -14,29 +14,32 @@ partition.replacement(Dx, PM, Q = NULL, Pparm = NULL,
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{Dx}{Data frame or matrix to be replaced.}
-  \item{PM}{Partition matrix with same dimension of \code{Dx}. See details.}
-\item{Q}{Number of discrete values, \eqn{1, \ldots, Q}, in the r. v.}  
-  \item{Pparm}{List of replacement parameters for each partition. See details}
-  \item{fake.model}{A character string indicating which instance of a conditional replacement distribution is to be used for the faking model, see \code{\link{model.fake.par}}.}
+  \item{PM}{Partition matrix with size \code{dim(Dx)}. See details.}
+\item{Q}{Max value in the discrete r.v. range: \eqn{1, \ldots, Q}.}  
+  \item{Pparm}{List of replacement parameters for each class in the replacement partition. See details.}
+  \item{fake.model}{A character string indicating the model for the conditional replacement distribution, see \code{\link{model.fake.par}}.}
   \item{p}{Overall probability of replacement. Must be a matrix with \eqn{P} rows and  two columns. See details.
   }
 }
 \details{
-\code{PM} has the same dimension as \code{Dx} and a numeric code for each distinct class in the partition.
+\code{PM} has size \code{dim(Dx)} and contains a
+numeric code for each distinct class in the partition.
 If a cell of the partition matrix \code{PM} contains 
 \code{0}, then the corresponding \code{Dx} cell value is not modified (no replacements condition class).
 
 \code{Pparm} is a list containing three elements. Each element is a \eqn{P\times 2} matrix where \eqn{P} is the total number of classes in the partition (see examples for further details). 
 
-\code{p}: Overall probability of replacement: \code{p[,1]} indicates the faking good probability, \code{p[,2]} the faking bad probability.
+\code{p}: Overall probability of replacement: \code{p[,1]} indicates the faking good probability, \code{p[,2]} indicates the faking bad probability.
 
-\code{gam}: Gamma parameter: \code{gam[,1]} indicates the faking good parameter, 
-  \code{gam[,2]} the faking bad parameter.
+\code{gam}:  Gamma parameter: \code{gam[,1]} and \code{gam[,2]}
+indicate the faking good and the faking bad parameters for the
+lower bound \code{a}.
 
-\code{del}: Delta parameter: \code{del[,1]} indicates the faking good parameter, 
-  \code{del[,2]} the faking bad parameter.
+\code{del}: Delta parameter: \code{del[,1]} and \code{del[,2]} 
+indicate the faking good and the faking bad parameters for the
+upper bound \code{b}.
 
-Note that it is possible to define a fake model using the \code{fake.model} assignment. In such cases the user must specify also the overall probability of replacement using parameter \code{p}. 
+Note that it is possible to define a faking model using the \code{fake.model} assignment. In such cases the user must specify also the overall probability of replacement using parameter \code{p}. 
 
 }
 

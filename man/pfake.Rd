@@ -22,27 +22,27 @@ An observed original value.
 }
   \item{p}{
 Overall probability of replacement: \code{p[1]} indicates the faking good probability  
-  \code{p[2]} the faking bad probability.
+  \code{p[2]} indicates the faking bad probability.
 }
-  \item{Q}{
-Number of discrete values, \eqn{1, \ldots, Q}, in the r. v.
+  \item{Q}{Max value in the discrete r.v. range: \eqn{1, \ldots, Q}.
 }
   \item{gam}{
 Gamma parameter: \code{gam[,1]} indicates the faking good parameter \eqn{\gamma_{+}}, 
-  \code{gam[,2]} the faking bad parameter \eqn{\gamma_{-}}.
+  \code{gam[,2]} indicates the faking bad parameter \eqn{\gamma_{-}}.
 }
   \item{del}{
 Delta parameter: \code{del[,1]} indicates the faking good parameter \eqn{\delta_{+}}, 
-  \code{del[,2]} the faking bad parameter \eqn{\delta_{-}}.
+  \code{del[,2]} indicates the faking bad parameter \eqn{\delta_{-}}.
 }
-  \item{fake.model}{A character string indicating which instance of a conditional replacement distribution is to be used for the faking model. The options are:  \code{uninformative} (default option) [\code{gam = c(1,1)} and \code{del = c(1,1)}]; \code{average} [\code{gam = c(3,3)} and \code{del = c(3,3)}]; 
+  \item{fake.model}{A character string
+indicating the model for the conditional replacement distribution. The options are:  \code{uninformative} (default option) [\code{gam = c(1,1)} and \code{del = c(1,1)}]; \code{average} [\code{gam = c(3,3)} and \code{del = c(3,3)}]; 
   \code{slight} [\code{gam = c(1.5,4)} and \code{del = c(4,1.5)}]; \code{extreme} [\code{gam = c(4,1.5)} and \code{del = c(1.5,4)}].}
 }
 %\details{
 %%  ~~ If necessary, more details than the description above ~~
 %}
 \value{
-Gives the conditional probability based on the following equation
+Gives the conditional probability distribution based on the following equation
 \deqn{
 p(f=k|d=h,\theta_F)=
 \left\{ 
@@ -55,7 +55,7 @@ p(f=k|d=h,\theta_F)=
 \end{array}
 \right. 
 }
-with \eqn{\theta_F} and \eqn{DG} being the parameter vector \eqn{(\gamma_{+},\gamma_{-},\delta_{+},\delta_{-},\pi_{+},\pi_{-})} and the generalized Beta distribution for discrete variables (\code{\link{dgBetaD}}) with bounds \eqn{a=h+1} (resp. \eqn{a=1}) and \eqn{b=Q} (resp \eqn{b=h-1}). The parameter \eqn{\pi_{+}} denotes the probability of faking good, \eqn{\pi_{-}} the probability of faking bad.  
+with \eqn{\theta_F} and \eqn{DG} being the parameter vector \eqn{(\gamma_{+},\gamma_{-},\delta_{+},\delta_{-},\pi_{+},\pi_{-})} and the generalized Beta distribution for discrete variables (\code{\link{dgBetaD}}) with bounds \eqn{a=h+1} (resp. \eqn{a=1}) and \eqn{b=Q} (resp \eqn{b=h-1}). The parameter \eqn{\pi_{+}} denotes the probability of faking good, \eqn{\pi_{-}} indicates the probability of faking bad.  
 Note that the faking probabilities must satisfy the following condition: \eqn{\pi_{+}+\pi_{-} \leq 1}.   
 }
 \references{

@@ -18,8 +18,10 @@ Number of observations.
   \item{R}{
 Correlation matrix.
 }
-  \item{Q}{
-Number of discrete values in the random variable. Could be a single value or a vector. If \code{Q} is set to 1 (default value), the function produces continuous variables by setting \code{th=c(-Inf,Inf)} and \code{probs=1}. 
+  \item{Q}{Number of discrete values in the
+random variables. It is a single value or a vector. If \code{Q} is set to
+1 (default), the function returns continuous data distributed
+according to the normal standardized distribution.
 }
 
 \item{th}{
@@ -34,7 +36,7 @@ List of probabilities; each elements contains \code{Q} values.
 %}
 \value{
 Returns a list with four elements:
-\item{data }{The simulate data matrix.}
+\item{data }{The simulated data matrix.}
   \item{R }{Correlation matrix.}
 \item{thresholds }{The list of thresholds.}
 \item{probs }{The list of probabilities. }
@@ -49,7 +51,7 @@ Massimiliano Pastore & Luigi Lombardi
 \note{
 Requires  
 
-Defaults work like in the \code{mwrnorm} function of the \code{MASS} package.
+Defaults work like in the \code{mvrnorm} function of the \code{MASS} package.
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~

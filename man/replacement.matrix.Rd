@@ -5,7 +5,7 @@
 Replacement matrix.
 }
 \description{
-Creates the replacement matrix.
+Builds the replacement matrix. 
 }
 \usage{
 replacement.matrix(Q = 5, p = c(0,0), gam = c(1,1), del = c(1,1),
@@ -14,21 +14,22 @@ replacement.matrix(Q = 5, p = c(0,0), gam = c(1,1), del = c(1,1),
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{Q}{
-Number of discrete values, \eqn{1, \ldots, Q}, in the r. v.
+Max value in the discrete r.v. range: \eqn{1, \ldots, Q}.
 }
   \item{p}{
 Overall probability of replacement: \code{p[1]} indicates the faking good probability  
-  \code{p[2]} the faking bad probability.
+  \code{p[2]} indicates the faking bad probability.
 }
   \item{gam}{
 Gamma parameter: \code{gam[,1]} indicates the faking good parameter \eqn{\gamma_{+}}, 
-  \code{gam[,2]} the faking bad parameter \eqn{\gamma_{-}}.
+  \code{gam[,2]} indicates the faking bad parameter \eqn{\gamma_{-}}.
 }
   \item{del}{
 Delta parameter: \code{del[,1]} indicates the faking good parameter \eqn{\delta_{+}}, 
-  \code{del[,2]} the faking bad parameter \eqn{\delta_{-}}.
+  \code{del[,2]} indicates the faking bad parameter \eqn{\delta_{-}}.
 }
-  \item{fake.model}{A character string indicating which instance of a conditional replacement distribution is to be used for the faking model. The options are:  \code{uninformative} (default option) [\code{gam = c(1,1)} and \code{del = c(1,1)}]; \code{average} [\code{gam = c(3,3)} and \code{del = c(3,3)}]; 
+  \item{fake.model}{A character string
+indicating the model for the conditional replacement distribution. The options are:  \code{uninformative} (default option) [\code{gam = c(1,1)} and \code{del = c(1,1)}]; \code{average} [\code{gam = c(3,3)} and \code{del = c(3,3)}]; 
   \code{slight} [\code{gam = c(1.5,4)} and \code{del = c(4,1.5)}]; \code{extreme} [\code{gam = c(4,1.5)} and \code{del = c(1.5,4)}].}
 }
 \details{

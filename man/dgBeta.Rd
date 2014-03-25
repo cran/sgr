@@ -6,8 +6,7 @@ Generalized Beta Distribution.
 }
 \description{
 The generalized beta
-distribution extends the classical beta distribution to continuous
-random variables beyond the normalized range [0,1] (Whitby,
+distribution extends the classical beta distribution beyond the [0,1] range (Whitby,
 1971). 
 }
 \usage{
@@ -38,7 +37,7 @@ The Generalized Beta Distribution is defined as follows:
 (x-a)^{\gamma-1}(b-x)^{\delta-1}}
 
 where \eqn{B(\gamma,\delta)} is the beta function. The parameters \eqn{a \in R} and 
-\eqn{b \in R} (with \eqn{a < b}) are the left and right end points respectively, and \eqn{\gamma > 0} and \eqn{\delta > 0} are the governing shape parameters for \eqn{a} and \eqn{b} respectively. For all the values of
+\eqn{b \in R} (with \eqn{a < b}) are the left and right end points respectively. The parameters \eqn{\gamma > 0} and \eqn{\delta > 0} are the governing shape parameters for \eqn{a} and \eqn{b} respectively. For all the values of
 the r.v. \eqn{X} that fall outside the interval \eqn{[a, b]}, \eqn{G} simply takes value 0. The
 generalized beta distribution reduces to the beta distribution when \eqn{a = 0} and
 \eqn{b = 1}.

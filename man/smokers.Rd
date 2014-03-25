@@ -3,8 +3,7 @@
 \alias{smokers} 
 \title{Data set} 
 
-\description{ 
-Data was collected using a single item selected from a survey about the use of alcohol and other drugs among young people.} 
+\description{Data about smoking and drug consumption among young people.} 
 
 \usage{data(smokers)} 
 

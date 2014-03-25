@@ -19,7 +19,7 @@ rdatarepl <- function(Dx,RM,printfp=TRUE) {
   Delta[Delta!=0] <- 1
   Fperc <- sum(Delta)/(prod(dim(Delta)))*100
   
-  if (printfp) cat(paste(Fperc,"% of data replaced.",sep=""),"\n")
+  if (printfp) cat(paste(round(Fperc,2),"% of data replaced.",sep=""),"\n")
   return(list(Fx=Fx,Fperc=Fperc))
   
 }

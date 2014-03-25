@@ -14,11 +14,11 @@ rdatarepl(Dx, RM, printfp = TRUE)
 \arguments{
   \item{Dx}{Data frame or matrix to be replaced.}
   \item{RM}{Replacement matrix.}
-  \item{printfp}{Logical, if \code{TRUE} (the default), it prints the percentages of
+  \item{printfp}{Logical, if \code{TRUE} (the default), it prints the percentage of
   data replaced.}
 }
 \details{
-Replacement matrix could be obtained from \code{\link{replacement.matrix}} function. 
+Replacement matrices can be obtained from the \code{\link{replacement.matrix}} function. 
 }
 \value{
 Returns a list with two elements: 

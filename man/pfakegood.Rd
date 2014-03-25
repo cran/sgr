@@ -22,7 +22,7 @@ An observed original value.
 Overall probability of replacement. 
 }
   \item{Q}{
-Number of discrete values, \eqn{1, \ldots, Q}, in the r. v.
+Max value in the discrete r.v. range: \eqn{1, \ldots, Q}.
 }
   \item{gam}{
 Gamma parameter.

@@ -13,15 +13,15 @@ arb(Bpar, B0)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{Bpar}{
-Matrix \eqn{b \times p} . 
+A \eqn{B \times P} matrix  (\eqn{B} replicates \eqn{\times} \eqn{P} parameters). 
 }
   \item{B0}{
 Vector of true parameter values.
 }
 }
 \details{
-Let \eqn{\hat{\theta}_{ij}} be the estimated parameter value if the \eqn{j}th 
-parameter in the \eqn{i}th sample (replicate), \eqn{i = 1, 2, \ldots B}, \eqn{j = 1, 2, \ldots P}, (thus \eqn{P =} number of parameters, \eqn{B =} number of replicates),
+Let \eqn{\hat{\theta}_{ij}} be the estimated parameter value for the \eqn{j}th 
+parameter in the \eqn{i}th sample (replicate), \eqn{i = 1, 2, \ldots B}, \eqn{j = 1, 2, \ldots P}, 
 and let \eqn{\theta_{j}} be the corresponding true parameter value, the Average relative bias is defined as follows:
 
 \deqn{ARB=\frac{100}{B}\sum_{i}\frac{1}{P} \sum_{j} \left( \frac{\hat{\theta}_{ij}-\theta_{j}}{\theta_{j}} \right)  } 

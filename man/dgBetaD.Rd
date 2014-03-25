@@ -27,7 +27,7 @@ Gamma parameter.
   \item{del}{
 Delta parameter.
 }
-  \item{ct}{Correction term, as default set to 1.}
+  \item{ct}{Correction term, default value: 1.}
 }
 \details{
 Let \eqn{X} be a discrete variable with range 
