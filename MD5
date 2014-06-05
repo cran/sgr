@@ -1,8 +1,8 @@
-07f9caddc8fcf09d8bf59b601e56be22 *DESCRIPTION
+97c0592d7c6d6c7920f88f168bab805d *DESCRIPTION
 8b54e5a89fbda3af5e077053d40bec76 *NAMESPACE
 017b7ecd17e084b74523eca5e63e0221 *R/dgBeta.R
 4118788ca180d50560ec2a950b743dd7 *R/dgBetaD.R
-a76e5ed48e6b341af559a7e0bd1439a7 *R/formule.bias.R
+b4f8c67e51876e2faaa877221b25841f *R/formule.bias.R
 4317d38d0058bda12045afbcee5b450b *R/model.fake.par.R
 b648c1caef6fc9d72ba1d68bc56c0b4b *R/partition.replacement.R
 57a6e4c8a3933e8afb00f08b799347da *R/pfake.R
@@ -27,5 +27,4 @@ b9a13bb61941422af590e4cc60555230 *man/psydata.Rd
 076e9c57315d0c7aac625e6cd6d6c5cb *man/rdatagen.Rd
 4de3e5d10b709d6b80cdb7c802fb91bb *man/rdatarepl.Rd
 95c77e7e02d6da391655f5be99b0608d *man/replacement.matrix.Rd
-766fd9b01206eb3148138b1d3d3ccfd9 *man/sgr-package.Rd
 527223ed2929c43d668a5066276292b3 *man/smokers.Rd
