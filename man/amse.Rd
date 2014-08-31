@@ -24,8 +24,7 @@ Let \eqn{\hat{\theta}_{ij}} be the estimated parameter value for the \eqn{j}th
 parameter in the \eqn{i}th sample (replicate), \eqn{i = 1, 2, \ldots B}, \eqn{j = 1, 2, \ldots P}, 
 and let \eqn{\theta_{j}} be the corresponding true parameter value, the Average root mean square error is defined as follows:
 
-\deqn{AMSE=\frac{1}{B}\sum_{i}\sqrt{\frac{1}{P} \sum_{j} \left[ \frac{\hat{\theta}_{ij}-\theta_{j}}{\theta_{j}} \right]^2}  } 
-
+\deqn{AMSE=\frac{1}{B}\sum_{i}\sqrt{\frac{1}{P} \sum_{j} \left[ \frac{\hat{\theta}_{ij}-\theta_{j}}{\theta_{j}} \right]^2}} 
 }
 \value{
 Gives the AMSE value.
@@ -37,9 +36,9 @@ Factor Analysis of Ordinal Variables With Misspecified Models, \emph{Structural 
 \author{
 Massimiliano Pastore & Luigi Lombardi
 }
-%\note{
-%%  ~~further notes~~
-%}
+\note{
+If \eqn{\theta_{j} = 0}, the ratio \eqn{\left[ \frac{\hat{\theta}_{ij}-\theta_{j}}{\theta_{j}} \right] } is modified as follows: \eqn{\left[ \frac{\hat{\theta}_{ij}-0}{1}  \right]}
+}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 

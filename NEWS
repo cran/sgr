@@ -1,0 +1,6 @@
+  CHANGES IN sgr VERSION 1.2
+
+CHANGES
+  * Changed amse and arb functions in case in which true parameter value is zero.
+  * Updated bibliography.
+

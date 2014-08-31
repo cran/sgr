@@ -37,9 +37,10 @@ Factor Analysis of Ordinal Variables With Misspecified Models, \emph{Structural 
 \author{
 Massimiliano Pastore & Luigi Lombardi
 }
-%\note{
-%%  ~~further notes~~
-%}
+\note{
+If \eqn{\theta_{j} = 0}, the ratio \eqn{\left( \frac{\hat{\theta}_{ij}-\theta_{j}}{\theta_{j}} \right)} is modified as follows: \eqn{\left( \frac{\hat{\theta}_{ij}-0}{1} \right)}
+
+}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
