@@ -13,7 +13,7 @@ amse(Bpar, B0)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{Bpar}{
-A \eqn{B \times P} matrix  (\eqn{B} replicates \eqn{\times} \eqn{P} parameters). 
+Matrix with dimension \eqn{B} (replicates) \eqn{\times P} (parameters).
 }
   \item{B0}{
 Vector of true parameter values.

@@ -21,8 +21,7 @@ A fake value.
 An observed original value. 
 }
   \item{p}{
-Overall probability of replacement: \code{p[1]} indicates the faking good probability  
-  \code{p[2]} indicates the faking bad probability.
+Overall probability of replacement: \code{p[1]} indicates the faking good probability, \code{p[2]} indicates the faking bad probability.
 }
   \item{Q}{Max value in the discrete r.v. range: \eqn{1, \ldots, Q}.
 }
@@ -59,6 +58,8 @@ with \eqn{\theta_F} and \eqn{DG} being the parameter vector \eqn{(\gamma_{+},\ga
 Note that the faking probabilities must satisfy the following condition: \eqn{\pi_{+}+\pi_{-} \leq 1}.   
 }
 \references{
+Lombardi, L., Pastore, M. (2014).  sgr: A Package for Simulating Conditional Fake Ordinal Data. \emph{The R Journal}, 6, 164-177.
+
 Pastore, M., Lombardi, L. (2014). The impact of faking on Cronbach's Alpha for
 dichotomous and ordered rating scores. \emph{Quality & Quantity}, 48, 1191-1211.
 }

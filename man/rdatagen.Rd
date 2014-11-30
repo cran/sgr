@@ -42,11 +42,13 @@ Returns a list with four elements:
 \item{probs }{The list of probabilities. }
 }
 \references{
+Lombardi, L., Pastore, M. (2014).  sgr: A Package for Simulating Conditional Fake Ordinal Data. \emph{The R Journal}, 6, 164-177.
+
 Pastore, M., Lombardi, L. (2014). The impact of faking on Cronbach's Alpha for
 dichotomous and ordered rating scores. \emph{Quality & Quantity}, 48, 1191-1211.
 }
 \author{
-Massimiliano Pastore & Luigi Lombardi
+Massimiliano Pastore, Luigi Lombardi & Marco Bressan
 }
 \note{
 Defaults work like in the \code{mvrnorm} function of the \code{MASS} package.
@@ -83,8 +85,15 @@ Dx <- rdatagen(n=10000,R=R,th=th)$data
 par(mfrow=c(1,2))
 for (j in 1:ncol(Dx)) barplot(table(Dx[,j])/nrow(Dx))
 
-## set correlations and probabilities
+## set correlations and probabilities [1]
 probs <- list(c(.125,.375,.375,.125),c(.125,.375,.375,.125))
+Dx <- rdatagen(n=10000,R=R,probs=probs)$data
+
+par(mfrow=c(1,2))
+for (j in 1:ncol(Dx)) barplot(table(Dx[,j])/nrow(Dx))
+
+## set correlations and probabilities [2]
+probs <- c(.125,.375,.375,.125)
 Dx <- rdatagen(n=10000,R=R,probs=probs)$data
 
 par(mfrow=c(1,2))

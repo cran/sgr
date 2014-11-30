@@ -30,6 +30,8 @@ Massimiliano Pastore
 %%  ~~further notes~~
 %}
 \references{
+Lombardi, L., Pastore, M. (2014).  sgr: A Package for Simulating Conditional Fake Ordinal Data. \emph{The R Journal}, 6, 164-177.
+
 Pastore, M., Lombardi, L. (2014). The impact of faking on Cronbach's Alpha for
 dichotomous and ordered rating scores. \emph{Quality & Quantity}, 48, 1191-1211.
 }

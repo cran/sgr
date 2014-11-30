@@ -26,9 +26,37 @@
 #th <- NULL
 
 ## se le soglie o le probs non sono nulle deve controllare che Q sia coerente.
+#n <- 10
+#R <- matrix(c(1,.4,.4,1),2,2)
+#Q <- th <- NULL
+#probs <- list(c(.125,.375,.375,.125),c(.125,.375,.375,.125))
+#Dx <- rdatagen(n=10000,R=R,probs=probs)$data
+
+### DA FARE  29/10/2014
+### gestione liste nel caso in cui siano tutte uguali
+# rdatagen(10,probs=c(.2,.2,.2,.2,.2),Q=5)
+# Q dovrebbe essere lungo 1 oppure ncol(R)
+# probs deve essere una lista ed essere probabilita se non lo e si normalzza con warning
+#n <- 10; R <- diag(1,2); Q <- 4; probs <- list(c(.2,.2,.2),c(0,.5,.5)); th <- NULL
+#probs <- c(2,5,0,3)
+#rdatagen(10,Q=4,probs=probs)
 
 #########################################################
 rdatagen <- function(n=100,R=diag(1,2),Q=NULL,th=NULL,probs=NULL) {
+  
+  ## controlli probs  aggiunto 29/10/2014
+  if (!is.null(probs)) {
+    if (!is.list(probs)) {
+      warning("probs set to list") ## inglese da controllare
+      probs <- list(probs)
+    }
+    for (j in 1:length(probs)) {
+      if (sum(probs[[j]])!=1) {
+        warning("probs normalized") ## inglese da controllare
+        probs[[j]] <- probs[[j]]/sum(probs[[j]])
+      }
+    }
+  }
   
   if ((is.null(Q))&(is.null(th))&(is.null(probs))) {
     Q <- rep(1,ncol(R))
@@ -36,12 +64,12 @@ rdatagen <- function(n=100,R=diag(1,2),Q=NULL,th=NULL,probs=NULL) {
     if ((is.null(Q))&(!is.null(th))) for (j in 1:length(th)) Q <- c(Q,length(th[[j]])-1)
     if (is.null(Q)&(is.null(th))&(!is.null(probs))) for (j in 1:length(probs)) Q <- c(Q,length(probs[[j]]))
   }
-  Q
+  #Q
   
-  if (length(Q)==1) {
+  if (length(Q)==1) { # Q dovrebbe essere lungo 1 oppure ncol(R)
     Q <- rep(Q,ncol(R))
   }
-  Q
+  #Q
   
   if ((is.null(th))&(is.null(probs))) {
     for (j in 1:ncol(R)) {
@@ -52,7 +80,7 @@ rdatagen <- function(n=100,R=diag(1,2),Q=NULL,th=NULL,probs=NULL) {
       }
     }
   }
-  th
+  #th
   
   if ((is.null(probs))&(!(is.null(th)))) {
     for (j in 1:length(th)) {
@@ -67,6 +95,14 @@ rdatagen <- function(n=100,R=diag(1,2),Q=NULL,th=NULL,probs=NULL) {
   probs
   
   if ((is.null(th))&(!is.null(probs))) {
+    
+    ## se le probs sono tutte uguali per ciascun item 
+    if (length(probs)==1) {
+      PROBS <- probs
+      for (j in 1:(ncol(R)-1)) probs <- c(probs,PROBS)
+    }
+    probs
+    
     for (j in 1:length(probs)) {
       if (length(probs[[j]])!=Q[j]) {
         cat(paste("found probs:", paste(probs[[j]],collapse=","),"and Q:",Q[j]),"\n")
@@ -82,10 +118,16 @@ rdatagen <- function(n=100,R=diag(1,2),Q=NULL,th=NULL,probs=NULL) {
   ### discretizzazione
   Dx <- X
   colonne <- which(Q>1)
-  for (j in colonne) Dx[,j] <- cut(Dx[,j],th[[j]])
-
+  #for (j in colonne) Dx[,j] <- cut(Dx[,j],th[[j]])
+  for (j in colonne) Dx[,j] <-.bincode(Dx[, j], th[[j]]) ### 
+  
   return(list(data=Dx,R=R,thresholds=th,probs=probs))
 }
+
+#X <- rdatagen(1000,Q=5,probs=c(.1,8,0,0,5))
+#par(mfrow=c(1,2))
+#for (j in 1:ncol(X$data)) barplot(table(X$data[,j]))
+
 
 #Q <- c(5,0)
 #Q <- 2

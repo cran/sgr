@@ -30,7 +30,7 @@ Delta parameter.
   \item{ct}{Correction term, default value: 1.}
 }
 \details{
-Let \eqn{X} be a discrete variable with range 
+Let \eqn{X} be a discrete r. v. with range 
 \deqn{R_X=\{a,a+1,a+2,\ldots, a+t-1,a+t = b  \} }
 and where \eqn{a \in \mathrm{N} \cup \{0 \} } and \eqn{t \in \mathrm{N}}. The Generalized Discrete Beta Distribution for the r.v. \eqn{X} is defined as follows:
 \deqn{DG(x;a,b,\gamma,\delta)= 
@@ -52,6 +52,8 @@ G^*(x;a,b,\gamma,\delta)=\frac{1}{B(\gamma,\delta)(b-a+2c)^{\gamma+\delta-1}}
 Gives the density.
 }
 \references{
+Lombardi, L., Pastore, M. (2014).  sgr: A Package for Simulating Conditional Fake Ordinal Data. \emph{The R Journal}, 6, 164-177.
+
 Pastore, M., Lombardi, L. (2014). The impact of faking on Cronbach's Alpha for
 dichotomous and ordered rating scores. \emph{Quality & Quantity},  48, 1191-1211.
 }
