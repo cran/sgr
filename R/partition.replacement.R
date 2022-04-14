@@ -1,8 +1,5 @@
 #rm(list=ls())
-#load("~/lavori/Rdevel/data/Dx.rda")
-#load("~/lavori/Rdevel/data/PM.rda")
-#Q <- NULL; Pparm <- NULL; fake.model=NULL;p=NULL
-#Pparm <- list(p=c(0,0),gam=c(0,4),del=c(0,1.5))
+#load("~/lavori/proveR/sgr/partition.replacement.rda")
 
 partition.replacement <- function(Dx,PM,Q=NULL,Pparm=NULL,
                                   fake.model=NULL,p=NULL) {

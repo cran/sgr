@@ -8,12 +8,12 @@ citEntry(entry = "Article",
   volume       = "6",
   number       = "1",
   pages        = "164--177",
-  url          = "http://journal.r-project.org/archive/2014-1/lombardi-pastore.pd",
+  url          = "https://svn.r-project.org/Rjournal/html/archive/2014/RJ-2014-019/RJ-2014-019.pdf",
 
   textVersion  =
   paste("Luigi Lombardi and Massimiliano Pastore (2014).",
         "sgr: A Package for Simulating Conditional Fake Ordinal Data.",
         "The R Journal, 6(1), 164-177.",
-        "URL http://journal.r-project.org/archive/2014-1/lombardi-pastore.pdf.")
+        "URL https://svn.r-project.org/Rjournal/html/archive/2014/RJ-2014-019/RJ-2014-019.pdf")
 )
 

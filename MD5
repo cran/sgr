@@ -1,11 +1,11 @@
-2c70c6860ffe033e5ce788d9f4146ddb *DESCRIPTION
-07b8a473019d0a43c9e1f7e8117308b7 *NAMESPACE
-1d89bf990e4212f85c15283e232875db *NEWS
+847075343ff31c7574c9433798bd3cf4 *DESCRIPTION
+48a8d32ecf366ce5537fe7250cf90c3d *NAMESPACE
+66a3296a4725935d462e2f1f922bb018 *NEWS
 017b7ecd17e084b74523eca5e63e0221 *R/dgBeta.R
 4118788ca180d50560ec2a950b743dd7 *R/dgBetaD.R
 1d6673bb9cb0f7f4513c928d63511a6f *R/formule.bias.R
 4317d38d0058bda12045afbcee5b450b *R/model.fake.par.R
-b648c1caef6fc9d72ba1d68bc56c0b4b *R/partition.replacement.R
+a4d2ca33a56ecfcc870c9fa53c3a02c1 *R/partition.replacement.R
 57a6e4c8a3933e8afb00f08b799347da *R/pfake.R
 ce362ff99d92849bc72faf18f04e0822 *R/pfakebad.R
 a8d0b7ef8e64cfdc1fe1aed1f2847330 *R/pfakegood.R
@@ -15,7 +15,7 @@ aeb72643ffd56543a9695e8554c78116 *R/replacement.matrix.R
 d9459ae2e3062e05db54176d0a30e367 *R/rfake.R
 2cb210b9b182d1bee7b03d235d371e25 *data/psydata.rda
 1135de428066aaacbb900e71bf26dd9e *data/smokers.rda
-dd8efb83a9630cd6ca4def01111e5c1f *inst/CITATION
+a01e888365ae8f78cff25024e013fb35 *inst/CITATION
 c61f81dbf39ae025d7b72fe438a61663 *man/amse.Rd
 e9d5142d7b1025b30236298249ab0f00 *man/arb.Rd
 3c632d04b334b37d5041b879a69e3c94 *man/dgBeta.Rd
